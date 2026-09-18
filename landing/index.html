@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chorvivo — keep every version of the work</title>
+<meta name="description" content="Chorvivo is a workspace for commercial choreographers. Record the room, keep every version, and leave with a dated record of what you made.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --floor:#E4E1DA;
+    --ink:#171614;
+    --muted:#6B675F;
+    --mark:#2438D8;
+    --rule:#C6C2B8;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--floor);
+    color:var(--ink);
+    font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.55;
+  }
+  .wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem;}
+
+  header{padding:2rem 0 0;}
+  .mark{font-weight:600;letter-spacing:-0.01em;font-size:1.05rem;}
+
+  .hero{padding:5.5rem 0 4rem;}
+  h1{
+    font-size:clamp(2.4rem,6.5vw,4.6rem);
+    line-height:1.02;
+    letter-spacing:-0.035em;
+    font-weight:600;
+    margin:0 0 1.5rem;
+    max-width:16ch;
+  }
+  .lede{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:46ch;color:var(--muted);margin:0 0 2.5rem;}
+
+  /* the counts — a choreographer's unit of time, used as the hero device */
+  .counts{
+    display:flex;
+    gap:0.5rem;
+    align-items:flex-end;
+    border-top:1px solid var(--rule);
+    padding-top:1rem;
+    margin-bottom:3rem;
+    overflow-x:auto;
+  }
+  .count{
+    flex:1 1 0;
+    min-width:2.6rem;
+    font-variant-numeric:tabular-nums;
+    font-size:0.95rem;
+    color:var(--muted);
+  }
+  .count b{
+    display:block;
+    height:var(--h,1.2rem);
+    background:var(--ink);
+    margin-bottom:0.5rem;
+    border-radius:1px;
+  }
+  .count.on b{background:var(--mark);}
+  .count.on{color:var(--mark);}
+
+  .cta{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--floor);
+    text-decoration:none;
+    padding:0.85rem 1.6rem;
+    border-radius:2px;
+    font-weight:500;
+  }
+  .cta:hover{background:var(--mark);}
+  .cta:focus-visible{outline:3px solid var(--mark);outline-offset:3px;}
+  .cta-note{color:var(--muted);font-size:0.95rem;margin-top:0.9rem;}
+
+  section{border-top:1px solid var(--rule);padding:3.5rem 0;}
+  h2{font-size:1.5rem;letter-spacing:-0.02em;font-weight:600;margin:0 0 2rem;max-width:24ch;}
+
+  .steps{display:grid;gap:2rem;grid-template-columns:repeat(3,1fr);margin:0;padding:0;list-style:none;counter-reset:step;}
+  .steps li{counter-increment:step;}
+  .steps li::before{
+    content:counter(step);
+    display:block;
+    font-variant-numeric:tabular-nums;
+    color:var(--mark);
+    font-weight:600;
+    margin-bottom:0.4rem;
+  }
+  .steps h3{font-size:1.05rem;font-weight:600;margin:0 0 0.4rem;}
+  .steps p{margin:0;color:var(--muted);font-size:0.97rem;}
+
+  .who p{max-width:54ch;color:var(--muted);margin:0 0 1rem;}
+  .who p.plain{color:var(--ink);}
+
+  footer{border-top:1px solid var(--rule);padding:2rem 0 3.5rem;color:var(--muted);font-size:0.9rem;}
+  footer a{color:var(--ink);}
+
+  @media (max-width:640px){
+    .steps{grid-template-columns:1fr;gap:1.75rem;}
+    .hero{padding:3.5rem 0 2.5rem;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap"><div class="mark">Chorvivo</div></div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Keep every version of the work you made.</h1>
+    <p class="lede">A workspace built around the way choreography actually gets made — record the room, mark what changed, and keep a dated record of the whole process without stopping to file anything.</p>
+
+    <div class="counts" aria-hidden="true">
+      <span class="count" style="--h:1.1rem">1</span>
+      <span class="count" style="--h:1.9rem">2</span>
+      <span class="count" style="--h:1.3rem">3</span>
+      <span class="count on" style="--h:3.2rem">4</span>
+      <span class="count" style="--h:1.6rem">5</span>
+      <span class="count" style="--h:2.4rem">6</span>
+      <span class="count" style="--h:1.2rem">7</span>
+      <span class="count on" style="--h:2.9rem">8</span>
+    </div>
+
+    <a class="cta" href="mailto:hello@chorvivo.com?subject=Chorvivo">Get in touch</a>
+    <p class="cta-note">Early access is opening to choreographers in New York, LA, and Seoul.</p>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <h3>Record the room</h3>
+        <p>Capture rehearsal video straight into the work, phone in hand. Rough takes are the point — nothing needs to be clean.</p>
+      </li>
+      <li>
+        <h3>Mark what changed</h3>
+        <p>Note the counts you reworked and who was in the room. Every take stays in order, so you can find the version from three weeks ago.</p>
+      </li>
+      <li>
+        <h3>Leave with the record</h3>
+        <p>Your process becomes a dated, exportable log of what you made and when — ready if you ever need to show your work is yours.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="who">
+    <h2>Who it's for</h2>
+    <p class="plain">Freelance and early-career commercial choreographers — music video, K-pop, tour, and brand work.</p>
+    <p>If your archive is a camera roll, a few Drive folders, and clips someone AirDropped you after a shoot, this is built for you.</p>
+  </section>
+
+  <footer>
+    <div>Chorvivo · New York · <a href="mailto:hello@chorvivo.com">hello@chorvivo.com</a></div>
+  </footer>
+
+</div>
+
+</body>
+</html>
