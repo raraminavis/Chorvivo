@@ -34,9 +34,23 @@ python3 -m http.server
 ```
 then open http://localhost:8000.
 
+## Sections
+
+Hero, How it works, Notes, Manifesto (`#manifesto`), Share, Privacy, laptop demo, Pricing (`#pricing`), FAQ, Team (`#team`), Join.
+
+- **Price:** search `index.html` for `PRICE:` and replace `TBD`. The FAQ answer "What does it cost?" needs the same update.
+- **Founder photos:** search for `FOUNDERS:`; the comment shows the `<img>` that replaces each initials circle. Put square photos in `assets/`.
+- **Video in place of the rehearsal photo:** the comment above the manifesto `<img>` has the `<video>` tag to swap in. Keep clips muted, under about 3 MB, and keep `rehearsal.jpg` as the poster.
+
+## Sign-up form
+
+The join form posts to Netlify Forms under the name `beta`. In Netlify: Site configuration > Forms > enable form detection, then redeploy. Sign-ups appear under Forms > beta. On any other host (including the local preview) the form shows its error message, because nothing is there to receive the post.
+
 ## Before launch
 
-- The join form validates the email but does not send it. Point it at the beta sign-up endpoint.
-- Privacy, Terms and Contact links have no destinations.
-- Pricing answer is "TBD".
+- Turn on Netlify form detection and send one test sign-up.
+- `og:url` and `og:image` in `index.html` point at chorvivo.com. Update both when the domain changes.
+- Privacy section: the page says a full policy will be posted before the beta opens. Write it, link it, and restore a Terms link in the footer.
+- Confirm the team bios and titles, and add photos.
+- Set the price.
 - Licences for the photos (assets/*.jpg and the photos inside the app screens) need confirming.
